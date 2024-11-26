@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Member {
+  seq String @id @db.VarChar(100) @map("seq")
+  id String @unique @db.VarChar(50)
+  name String @db.VarChar(50)
+  age Int? 
+  sex_cd String @db.VarChar
+  createdDate DateTime @default(dbgenerated()) @db.Timestamp(6) @map("created_date")
+  updatedDate DateTime? @db.Timestamp(6) @map("updated_date")
+
+  @@map("member")
+}
