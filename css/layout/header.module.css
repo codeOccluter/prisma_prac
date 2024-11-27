@@ -1,0 +1,32 @@
+.header {
+    background-color: #1b9017;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    list-style: none; /* 기본 목록 스타일 제거 */
+    display: flex; /* 가로로 나열 */
+    gap: 20px; /* 항목 사이 간격 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+  }
+  
+  .nav li {
+    display: inline; /* 인라인으로 표시 */
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* 글씨를 굵게 */
+    font-size: 24px;
+    transition: color 0.3s; /* 호버 효과를 위한 전환 */
+  }
+  
+  .nav a:hover {
+    color: #6dd64d; /* 호버 시 색상 변경 */
+  }
