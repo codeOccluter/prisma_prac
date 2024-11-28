@@ -1,32 +1,73 @@
 .header {
-    background-color: #1b9017;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
+    display: flex;  
     justify-content: space-between;
     align-items: center;
+    padding: 15px 18px;
+    background: linear-gradient(90deg, #45d640, #078721);
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-.nav {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu {
     list-style: none; /* 기본 목록 스타일 제거 */
     display: flex; /* 가로로 나열 */
-    gap: 20px; /* 항목 사이 간격 */
+    gap: 25px; /* 항목 사이 간격 */
     margin: 0; /* 기본 마진 제거 */
     padding: 0; /* 기본 패딩 제거 */
-  }
+}
   
-  .nav li {
-    display: inline; /* 인라인으로 표시 */
-  }
+.menu li {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menuLink:hover {
+  color: #8dd5bc;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  transition: transform 0.3s ease;
+}
   
-  .nav a {
+.menuLink {
     color: white;
     text-decoration: none;
-    font-weight: bold; /* 글씨를 굵게 */
+    font-weight: 800;
     font-size: 24px;
-    transition: color 0.3s; /* 호버 효과를 위한 전환 */
-  }
+    transition: color 0.3s, transform 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
   
-  .nav a:hover {
-    color: #6dd64d; /* 호버 시 색상 변경 */
-  }
+    .hamburger {
+        display: flex;
+    }
+}

@@ -7,16 +7,19 @@ const createMember = async (req: NextApiRequest, res: NextApiResponse) => {
     if(req.method === "POST") {
 
         const unique_id = nanoid()
-        const { id, name, age, sex_cd } = req.body
+        const { id, name, age, sex_cd, pw } = req.body
 
+        console.log(req.body)
+        console.log(`pw: ${pw}`)
         try {
             const newMember = await prisma.member.create({
                 data: { 
                     seq: unique_id,
                     id,
+                    pw,
                     name,
                     age: age || null,
-                    sex_cd
+                    sex_cd,
                  }
             })
             res.status(201).json(newMember)

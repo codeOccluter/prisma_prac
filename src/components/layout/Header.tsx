@@ -1,19 +1,30 @@
-import React from "react"
+"use client"
+
+import React, { useState } from "react"
 import Link from "next/link"
 import styles from "../../../css/layout/header.module.css"
 
 const Header = () => {
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
     return (
         <header className={styles.header}>
-            <h1>Runners High</h1>
-            <nav>
-                <ul className={styles.nav}>
-                    <li><Link href={"/"}>Home</Link></li>
-                    <li><Link href={"/member/signin"}>Sign in</Link></li>
-                    <li><Link href={"/dashboard"}>Board</Link></li>
+            <div className={styles.logo}>Runners High</div>
+            <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
+                <ul className={styles.menu}>
+                    <li><Link href={"/"} className={styles.menuLink}>Home</Link></li>
+                    <li><Link href={"/member/signin"} className={styles.menuLink}>Sign in</Link></li>
+                    <li><Link href={"/dashboard"} className={styles.menuLink}>Board</Link></li>
                 </ul>
             </nav>
+            <div className={styles.hamburger} onClick={toggleMenu}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
     )
 }
