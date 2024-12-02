@@ -5,15 +5,37 @@
     padding: 15px 18px;
     background: linear-gradient(90deg, #45d640, #078721);
     color: white;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+    position: relative;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.languageSelector {
+    margin-right: 20px;
+}
+
+.languageSelector select {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+.languageSelector select:focus {
+    outline: none;
+    border: 1px solid #6200ea;
 }
 
 .menu {
@@ -52,22 +74,31 @@
 }
 
 @media screen and (max-width: 768px) {
-    .nav{
-        display: none;
-        flex-direction: column;
-        background: #222;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 20px;
-    }
-
-    .nav.open {
-        display: flex;
-    }
-  
     .hamburger {
+        display: block;
+      }
+    
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+      }
+    
+      .nav.open {
         display: flex;
-    }
+      }
+    
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+    
+      .menu li {
+        margin: 10px 0;
+      }
+    
+      .languageSelector {
+        margin-bottom: 10px; /* 모바일 메뉴에서 아래쪽 여백 */
+      }
 }

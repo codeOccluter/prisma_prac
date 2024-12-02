@@ -15,8 +15,6 @@ export default function Home() {
       <div>
           <h1>{t('welcome')}</h1>
           <p>{t('description')}</p>
-          <button onClick={() => changeLanguage("en")}>English</button>
-          <button onClick={() => changeLanguage("ko")}>Korean</button>
       </div>
   )
 }
