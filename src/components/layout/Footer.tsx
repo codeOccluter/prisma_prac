@@ -7,7 +7,6 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.info}>
-                    <h3>Runners High</h3>
                     <p>
                         <span>Authorize : kihunism</span><br/>
                         <span>Copyright 2024. kihunism. All Rights Reserved.</span>

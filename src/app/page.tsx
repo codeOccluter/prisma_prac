@@ -2,14 +2,11 @@
 
 import '../i18n'
 import { useTranslation } from "react-i18next"
+import styles from "../../css/layout/page.module.css"
 
 export default function Home() {
 
-    const { t, i18n } = useTranslation()
-
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng)
-    }
+    const { t } = useTranslation()
 
   return (
       <div>

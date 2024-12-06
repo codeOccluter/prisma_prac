@@ -8,7 +8,7 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        fallbackLng: "ko",
+        fallbackLng: "en",
         debug: true,
         interpolation: {
             escapeValue: false, // React에서 escape 불필요

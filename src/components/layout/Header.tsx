@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import styles from "../../../css/layout/header.module.css"
 import "../../i18n"
@@ -10,6 +10,11 @@ const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { t, i18n } = useTranslation()
+    const [language, setLanguage] = useState(i18n.language)
+
+    useEffect(() => {
+        setLanguage(i18n.language)
+    }, [i18n.language])
 
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng)
@@ -25,10 +30,10 @@ const Header = () => {
                     <select
                         id="language"
                         onChange={(e) => changeLanguage(e.target.value)}
-                        defaultValue={i18n.language}
+                        value={language}
                     >
-                        <option value={"ko"}>Korean</option>
                         <option value={"en"}>English</option>
+                        <option value={"ko"}>Korean</option>
                     </select>
                 </div>
                 <ul className={styles.menu}>
