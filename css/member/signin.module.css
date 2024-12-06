@@ -4,69 +4,84 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
+    background-color: #f9f9f9;
 }
 
 .h1 {
     margin-bottom: 20px;
-    margin-top: -30px;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
     font-weight: 700;
     font-size: 36px;
+    color: #333;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     width: 300px;
+    max-width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .input {
-    margin-bottom: 15px;
+    flex: 1;
+    margin-bottom: 5px 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    font-size: 16px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s;
+    font-size: 1rem;
+    transition: all 0.3s;
 }
 
 .input:focus{
     background-color: #e4edd2;
+    border-color: #007BFF;
+    outline: none;
 }
 
-.input::before{
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 1px solid #b7b986;
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s;
+.loginButton {
+    padding: 10px 10px;
+    background-color: #007BFF;
+    margin-left: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.input:focus::before{
-    display: flex;
-    justify-content: space-between;
+.loginButton:hover {
+    background-color: #5a6268;
 }
 
 .buttonContainer {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 .button {
-    padding: 10px 15px;
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #416625;
+    background-color: #428013;
     color: white;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #005bb5;
+    background-color: #a1aa59;
 }

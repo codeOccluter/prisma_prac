@@ -19,7 +19,7 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>Runners High</div>
+            <div className={styles.logo}>{t('logo')}</div>
             <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
                 <div className={styles.languageSelector}>
                     <select
@@ -32,9 +32,9 @@ const Header = () => {
                     </select>
                 </div>
                 <ul className={styles.menu}>
-                    <li><Link href={"/"} className={styles.menuLink}>Home</Link></li>
-                    <li><Link href={"/member/signin"} className={styles.menuLink}>Sign in</Link></li>
-                    <li><Link href={"/dashboard"} className={styles.menuLink}>Board</Link></li>
+                    <li><Link href={"/"} className={styles.menuLink}>{t('home')}</Link></li>
+                    <li><Link href={"/member/signin"} className={styles.menuLink}>{t('signin')}</Link></li>
+                    <li><Link href={"/dashboard"} className={styles.menuLink}>{t('board')}</Link></li>
                 </ul>
             </nav>
             <div className={styles.hamburger} onClick={toggleMenu}>

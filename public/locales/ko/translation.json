@@ -1,4 +1,12 @@
 {
     "welcome": "안녕하세요",
-    "description": "이것은 다국어 지원 예제입니다."
+    "description": "이것은 다국어 지원 예제입니다.",
+    "home": "홈",
+    "signin": "로그인",
+    "board": "게시판",
+    "logo": "러너스 하이",
+    "forgotpw": "비밀번호 찾기",
+    "signup": "회원가입",
+    "id": "아이디",
+    "pw": "비밀번호"
 }

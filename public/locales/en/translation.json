@@ -1,4 +1,12 @@
 {
     "welcome": "Hello!",
-    "description": "This is a multiingual example."
+    "description": "This is a multiingual example.",
+    "home": "Home",
+    "signin": "Sign in",
+    "board": "Board",
+    "logo": "Runners High",
+    "forgotpw": "Forgot PW",
+    "signup": "Sign Up",
+    "id": "ID",
+    "pw": "Password"
 }

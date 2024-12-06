@@ -13,8 +13,10 @@ export default function Home() {
 
   return (
       <div>
-          <h1>{t('welcome')}</h1>
-          <p>{t('description')}</p>
+            <div className={styles.introduce}>
+                <h1>{t('welcome')}</h1>
+                <p>{t('description')}</p>
+            </div>
       </div>
   )
 }
