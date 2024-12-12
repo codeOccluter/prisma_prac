@@ -24,42 +24,57 @@ const Signin = () => {
             </div>
         )
     }
+
+    const handleSignin = (): void => {
+
+        console.log("=== 로그인 로직 구현 대기 ===")
+    }
+
+    const handleForgotPw = (): void => {
+
+        console.log("=== PW 찾기 로직 구현 대기 ===")
+    }
+
+    const handleSignup = (): void => {
+
+        console.log("=== 회원가입 로직 구현 대기 ===")
+    }
  
     return (
         <div className={styles.container}>
-            <h1 className={styles.h1}>{t('signin')}</h1>
-            <div>
-                <form className={styles.form}>
-                    <div className={styles.inputGroup}>
-                        <input 
-                            type="text"
-                            placeholder={t('id')}
-                            className={styles.inputText}
-                        />
-                        <button
-                            type="button"
-                            className={styles.loginButton}
-                        >{t('signin')}</button>
-                    </div>
-                    <div className={styles.inputGroup}>
-                        <input 
-                            type="password"
-                            placeholder={t('pw')}
-                            className={styles.inputText}
-                        />
-                    </div>
-                    <div className={styles.buttonContainer}>
-                        <button
-                            type="button"
-                            className={styles.button}
-                        >{t('forgotpw')}</button>
-                        <button
-                            type="button"
-                            className={styles.button}
-                        >{t('signup')}</button>
-                    </div>
-                </form>
-            </div>
+            <h1 className={styles.title}>{t('signin')}</h1>
+            <form className={styles.form}>
+                <div className={styles.inputGroup}>
+                    <input 
+                        type="text"
+                        placeholder={t('id')}
+                        className={styles.input}
+                    />
+                </div>
+                <div className={styles.inputGroup}>
+                    <input 
+                        type="password"
+                        placeholder={t('pw')}
+                        className={styles.input}
+                    />
+                </div>
+                <button
+                    type="button"
+                    className={styles.loginButton}
+                >{t('signin')}</button>
+                <div className={styles.linkGroup}>
+                    <button
+                        type="button"
+                        className={styles.linkButton}
+                        onClick={handleForgotPw}
+                    >{t('forgotpw')}</button>
+                    <button
+                        type="button"
+                        className={styles.linkButton}
+                        onClick={handleSignup}
+                    >{t('signup')}</button>
+                </div>
+            </form>
         </div>
     )
 }
