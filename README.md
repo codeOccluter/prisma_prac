@@ -15,10 +15,10 @@ Prisma를 활용한 데이터베이스 조작과 Next.js를 이용한 효율적�
 다른 프로젝트 제작 시에도 참조할 수 있도록 지속적으로 관리하고 업데이트할 계획입니다.
 
 # 사용 기술
-<img src="https://img.shields.io/badge/prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white"> 데이터베이스 마이그레이션 툴 <br/>
-<img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"> 개발 주언어(JS, TS) <br/>
-<img src="https://img.shields.io/badge/nextjs-000000?style=for-the-badge&logo=typescript&logoColor=white"> 통합 프레임워크 <br/>
-<img src="https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&logo=postgreSQL&logoColor=white"> 데이터베이스 관리 시스템(DBMS) <br/>
+<img src="https://img.shields.io/badge/prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white">
+<img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+<img src="https://img.shields.io/badge/nextjs-000000?style=for-the-badge&logo=typescript&logoColor=white">
+<img src="https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&logo=postgreSQL&logoColor=white">
 
 # 프로젝트 폴더 구조
 - 작성 예정
